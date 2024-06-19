@@ -1,3 +1,6 @@
+// import React from "react"
+// import ReactDOM from "react-dom/client"
+
 // const hed = document.getElementById('hed')
 // hed.innerHTML = "hwllo react"
 
@@ -13,18 +16,18 @@
 //     const root = ReactDOM.createRoot(document.getElementById("root"))
 //     root.render(heding)
 
-const div = React.createElement(
-    "div", {id: "parent"}, 
-    React.createElement(
-        "div", {id: "child"},
-        [React.createElement("h1", {id: "hed"}, 'my heding' ), 
-        React.createElement("h1", {id: "hed2"}, 'my heding2' )]),
+// const div = React.createElement(
+//     "div", {id: "parent"}, 
+//     React.createElement(
+//         "div", {id: "child"},
+//         [React.createElement("h1", {id: "hed"}, 'Hading' ), 
+//         React.createElement("h1", {id: "hed2"}, 'my heding2' )]),
 
-        React.createElement(
-            "div", {id: "child2"},
-            [React.createElement("h1", {id: "ched"}, 'my child 1' ), 
-            React.createElement("h1", {id: "ched2"}, 'my child 2' )])
-    )
+//         React.createElement(
+//             "div", {id: "child2"},
+//             [React.createElement("h1", {id: "ched"}, 'my child 1' ), 
+//             React.createElement("h1", {id: "ched2"}, 'my child 2' )])
+//     )
 
-        const root = ReactDOM.createRoot(document.getElementById("root"))
-        root.render(div)
+//         const root = ReactDOM.createRoot(document.getElementById("root"))
+//         root.render(div)
