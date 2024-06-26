@@ -1,0 +1,6 @@
+#npm:
+Once we intialized npm then we can install any Dependencies and packages in our app, thru npm.
+npm does not stand for Node package manager.
+"node package manager" is not long form of "npm"
+npm is a package manager.
+npm is used to install any packages or libraries
