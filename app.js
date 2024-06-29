@@ -1,146 +1,138 @@
 
 import React from "react"
 import ReactDOM from "react-dom/client"
+import { FaRegUser } from "react-icons/fa";
+import { MdOutlineShoppingCart } from "react-icons/md";
+import { FaStar } from "react-icons/fa6";
 
-// const hed = document.getElementById('hed')
-// hed.innerHTML = "hwllo react"
+//#HEDER
+//logo
+//nav items
+//login icon
+//cart icon
 
-// const hed = document.createElement('h1')
-// hed.innerHTML = "hello world iam manthan R harale"
+//#BODY
+//search-bar
+//#restro-card contenar
 
-// const root = document.getElementById('root')
-// root.appendChild(hed)
+//#CARD
+//img
+//name of restro
+//star reating
+//distence in mins
+//manu
 
-
-//thsi parnathises is use to geive the atrubut to our tag,like
-// const heding = React.createElement('h1', {id:"hed"}, "react frist code")
-//     const myRoot = ReactDOM.createRoot(document.getElementById("root"))
-//     myRoot.render(heding)
-
-// const div = React.createElement(
-//     "div", {id: "parent"}, 
-//     React.createElement(
-//         "div", {id: "child"},
-//         [React.createElement("h1", {id: "hed"}, 'Hading' ), 
-//         React.createElement("h1", {id: "hed2"}, 'my heding2' )]),
-
-//         React.createElement(
-//             "div", {id: "child2"},
-//             [React.createElement("h1", {id: "ched"}, 'my child 1' ), 
-//             React.createElement("h1", {id: "ched2"}, 'my child 2' )])
-//     )
-
-//         const root = ReactDOM.createRoot(document.getElementById("root"))
-//         root.render(div)
-
-
-// const heding = React.createElement(
-//     'h1',
-//     {id:"heding"}, 
-//     "ram ram React"
-// )
-// console.log(heding);
-
-// const jsxHed = <h1 id="hed" className="heding">hello</h1>
-
-// console.log(jsxHed);
-
-
-// const FristCom = () => {
-
-//     return(
-//         <div>
-//             <Heding/>
-//             <Heding/>
-//             <Heding/>
-//             <Heding/>
-//             <h3>he iam manthan harale and iam froma akola maharashtra i have complited my bcom in 2023 now I wont to go on porgraming paht</h3>
-//         </div>
-//     )
-// }
-
-// const Heding = () => ( 
-    
-//     <h1>INTRODUCTION</h1>
-// )
-
-
-// const root = ReactDOM.createRoot(document.getElementById("root"))
-
-// root.render(<FristCom/>)
-
-// const div = React.createElement(
-//     'div',{className:"titell"}, React.createElement(
-//         'h1',{}, "hello h1"), React.createElement(
-//             'h2',{}, "hello h2"), React.createElement(
-//                 'h3',{}, "hello h3"))
+//#FOOTER
+//LOGO
+//contectus
+//copiright
+//links
+//addres
 
 
 
-// const div = React.createElement(
-//     'div', {className:"titell"}, React.createElement(
-//         'h1',{}, React.createElement(
-//             'h2',{},React.createElement(
-//                 'h3',{}, "hello iam hear"
-//             )
-//         )
-//     )
-// )
+//HADDER
+const Hedder = () => {
+    return(
+        <header className="hed">
+       <div className="nav">
+       <img className="Logo" src="https://www.inspiredcoffee.org/wp-content/uploads/2020/05/Food-Icon-Orange.png"/>
 
-//                 const root = ReactDOM.createRoot(document.getElementById('root'))
+<ul className="navUl">
+ <li>Home</li>
+ <li>About</li>
+ <li>Contect</li>
+ <li>Offers</li>
+</ul>
 
-//                 root.render(div)
+<div className="logDiv">
+<FaRegUser />
+<h6>Login</h6>
+</div>
+
+<div className="cartDiv">
+<MdOutlineShoppingCart />
+<h6>Cart</h6>
+</div>
+</div>
+</header>
+    )
+}
+
+//CARD
+
+const Card = ({resName, cuisines,starReating,minitsToDelevery}) => {
+    return(
+        <div className="card">
+            <img className="res-img" src="https://tse4.mm.bing.net/th?id=OIP.nbr59CDTiou-ZIGF1F9sKAHaEo&pid=Api&P=0&h=180"/>
+            <div className="restorInfo">
+                <h2 className="res-name">{resName}</h2>
+                <p>{cuisines}</p>
+                <span className="starReating"><FaStar />{starReating}</span>
+
+                    <h3> minits To Delevery:{minitsToDelevery}</h3> 
+            </div>
+        </div>
+    )
+}
+
+const TitelContenar = () => {
+    return(
+        <div className="TitelContenar">
+             <div className="card-contenar-heding">
+        <h2>Top restaurant in Mumgi</h2>
+        <input className="search" type="text" placeholder="Search"/>
+        </div>
+        </div>
+    )
+}
+
+//BODY
+const Body = () => {
+
+    return(
+        <div className="bodyLeout">
+        <div className="cardContenar">
+            <Card resName="Maghna foods" cuisines="biryan, pulav, utapam, edali, samosa" starReating="4.5" minitsToDelevery="25 - 35" />
+            <Card resName= "Kfc" cuisines="burger, pizza, fird chiken, chiken65" starReating="3.4" minitsToDelevery="40 - 45"/>  
+            <Card resName= "Kfc" cuisines="burger, pizza, fird chiken, chiken65" starReating="3.4" minitsToDelevery="40 - 45"/>  
+            <Card resName= "Kfc" cuisines="burger, pizza, fird chiken, chiken65" starReating="3.4" minitsToDelevery="40 - 45"/>  
+            <Card resName= "Kfc" cuisines="burger, pizza, fird chiken, chiken65" starReating="3.4" minitsToDelevery="40 - 45"/>  
+            <Card resName= "Kfc" cuisines="burger, pizza, fird chiken, chiken65" starReating="3.4" minitsToDelevery="40 - 45"/>  
+            <Card resName= "kfc" cuisines="burger, pizza, fird chiken, chiken65" starReating="3.4" minitsToDelevery="40 - 45"/>  
+            <Card resName= "kfc" cuisines="burger, pizza, fird chiken, chiken65" starReating="3.4" minitsToDelevery="40 - 45"/>  
+            <Card resName= "kfc" cuisines="burger, pizza, fird chiken, chiken65" starReating="3.4" minitsToDelevery="40 - 45"/>  
+            <Card resName= "kfc" cuisines="burger, pizza, fird chiken, chiken65" starReating="3.4" minitsToDelevery="40 - 45"/>  
+            <Card resName= "kfc" cuisines="burger, pizza, fird chiken, chiken65" starReating="3.4" minitsToDelevery="40 - 45"/>  
+            <Card resName= "kfc" cuisines="burger, pizza, fird chiken, chiken65" starReating="3.4" minitsToDelevery="40 - 45"/>  
+            <Card resName= "kfc" cuisines="burger, pizza, fird chiken, chiken65" starReating="3.4" minitsToDelevery="40 - 45"/>  
+            <Card resName= "kfc" cuisines="burger, pizza, fird chiken, chiken65" starReating="3.4" minitsToDelevery="40 - 45"/>  
+            <Card resName= "kfc" cuisines="burger, pizza, fird chiken, chiken65" starReating="3.4" minitsToDelevery="40 - 45"/>  
+            <Card resName= "kfc" cuisines="burger, pizza, fird chiken, chiken65" starReating="3.4" minitsToDelevery="40 - 45"/>  
+            <Card resName= "kfc" cuisines="burger, pizza, fird chiken, chiken65" starReating="3.4" minitsToDelevery="40 - 45"/>  
+            <Card resName= "kfc" cuisines="burger, pizza, fird chiken, chiken65" starReating="3.4" minitsToDelevery="40 - 45"/>  
+        </div>
+        </div>
+      
+      
+    )
+}
 
 
-// const Hello = <div className="titell">
-//     <h1>hello manthan</h1>
-//     <h2>hello sanchit</h2>
-//     <h3>hello vinit</h3>
-// </div>
+const AppLeout = () => {
+
+    return(
+        <div className="appLeout">
+            <Hedder/>
+            <TitelContenar/>
+            <Body/>
+
+            {/* <Footer/> */}
+        </div>
+    )
+}
 
 
-// const root = ReactDOM.createRoot(document.getElementById('root'))
+const root = ReactDOM.createRoot(document.getElementById('root'))
 
-// root.render(Hello)
-
-
-
-// const Hello = () => {
-
-//     return(
-        
-//         <div className="tatill">
-          
-//             <h1 id="m1">apple</h1>
-//             <h2 id="m2">mango</h2>
-//             <h3 id="m3">banana</h3>
-//         </div>
-//     )
-// }
-
-// const Logo = () => {
-//     return <h1 className="h1">LOGO</h1>
-// }
-
-// const Search = () => {
-//     return<input id="sarch" placeholder="search"/>
-// }
-
-// const Icon = () => {
-//     return <h1 className="icon">Icon</h1>
-// }
-
-// const Header = () => {
-//     return(
-//         <div id="navbar">
-//             <Logo/>
-//             <Search/>
-//             <Icon/>
-//         </div>
-
-//     )
-// }
-
-// const root = ReactDOM.createRoot(document.getElementById('root'))
-
-// root.render(<Header/>)
+root.render(<AppLeout/>)
