@@ -5,12 +5,20 @@ import { FaStar } from "react-icons/fa6";
 
 const Card = (props) => {
     const {resData} = props;
-    const {name,cuisines,avgRating,costForTwo,cloudinaryImageId} = resData?.info
+    const {
+        name,
+        cuisines,
+        avgRating,
+        costForTwo,
+        cloudinaryImageId
+    } = resData?.info
+    
     const {deliveryTime} = resData.info.sla
   
       return(
-          <div className="card">
-            <img src={CARD_IMG + cloudinaryImageId}/>
+      
+      <div className="card">
+            <img src={CARD_IMG + cloudinaryImageId}/> 
               <div className="restorInfo">
   
                   <h2 className="res-name">{name}</h2>

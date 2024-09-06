@@ -69,7 +69,10 @@ body{
     height: auto;
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
+
 
 
 .card-contenar-heding{
@@ -166,3 +169,34 @@ body{
     font-weight: bolder;
     
 }
+
+.shimarContenar{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    min-width: 1200px;
+    height: auto;
+    justify-content: space-between;
+    margin-left: 200px;
+}
+
+.shimarCard{
+    width: 250px;
+    height: 250px;
+    border-radius: 8px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    cursor: pointer;
+    border: .1px solid rgb(205, 205, 205);
+    background-color:#ececec;
+}
+
+.LoginBtn{
+    background-color: orange;
+    border-radius: 3px;
+    padding: 5px 10px;
+    border: none;
+}
+
