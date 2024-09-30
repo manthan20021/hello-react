@@ -24,9 +24,6 @@ const fetchMothed = async () => {
   const json = await data.json()
   setResData(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
   setCopyOfResData(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle.restaurants)
-
-  
-
 };
 
 //Conditinal Rendering
