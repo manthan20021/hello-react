@@ -1,0 +1,27 @@
+//react LIFE-cycle method
+
+//parent constrtor
+//parent render
+//child1 constrtor
+//child1 render
+//child2 constrtor
+//child2 render
+//child1 copntdidmount
+//child2 coponte didmount
+//parent copontedidmount
+
+//WEBSITE FOR UNDERSTING OF REACT LIFE-CYCLE METHOD -> https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
+
+//ther is tow phases in react life-cycle metohd 
+//1]-RENDER PHASE
+//2]-COMMIT PHASE
+
+//1- RENDER PHASE
+//constructor will calld
+//render will calld
+
+//2- COMMIT PHASE
+//then react updets actuchel DOM , react will upteds DOM with the defoult-value/ domy-data
+//and the componentDidMount will be calld  --> then with componentDidMount achul valus/data is comes
+//after that componentDidUpdate will calld
+//that is whay we preefar make the api call in side the compontentDidMount 

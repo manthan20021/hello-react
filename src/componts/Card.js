@@ -1,6 +1,7 @@
-import {CARD_IMG} from "../utils/imges";
+import {CARD_IMG} from "../utils/Consten";
 import React from "react";
 import { FaStar } from "react-icons/fa6";
+
 
 
 const Card = (props) => {
@@ -9,25 +10,23 @@ const Card = (props) => {
         name,
         cuisines,
         avgRating,
-        costForTwo,
         cloudinaryImageId
-    } = resData?.info
+    } = resData?.info     
     
     const {deliveryTime} = resData.info.sla
   
       return(
-      
-      <div className="card">
-            <img src={CARD_IMG + cloudinaryImageId}/> 
-              <div className="restorInfo">
-  
-                  <h2 className="res-name">{name}</h2>
-                  <p>{cuisines.join(' ,')}</p>
-                  <span className="avgReating"> <FaStar/>{avgRating}</span>
-                  <h3>deliveryTime: {deliveryTime}</h3> 
-                  <h3 id="costForTwo">{costForTwo}</h3> 
+        
+      <div className="h-auto sm:w-64 w-full rounded-xl p-2" >
+            <img className="w-full sm:h-48 rounded-xl" src={CARD_IMG + cloudinaryImageId}/> 
+              <div className="restorInfo p-3">
+                  <h2 className="font-bold text-lg ">{name}</h2>
+                  <h4 className="font-bold flex items-center"> <FaStar/>{avgRating} • {deliveryTime}</h4>
+                  <p className="text-gray-600 font-semibold">{cuisines.join(' ,')}</p>
               </div>  
+             
           </div>
+        
       )
   }
 
