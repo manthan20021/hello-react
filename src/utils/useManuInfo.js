@@ -1,5 +1,5 @@
 import {useEffect} from "react"
-import { MANU_URL } from "../utils/Consten"
+import { MANU_URL } from "./Consten"
 import { useState } from "react";
 
 

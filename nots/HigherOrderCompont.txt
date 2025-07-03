@@ -1,0 +1,9 @@
+# Higher-order-component
+
+>>higher-order-component is a normerl js function witch takes a compont as a input and returns a another updated coponent.
+
+# controld and uncontrold component
+
+# lifting the state up
+
+# how to manege data in react app

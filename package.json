@@ -4,11 +4,8 @@
     "buffer": "^6.0.3",
     "console-browserify": "^1.2.0",
     "events": "^3.3.0",
-    "parcel": "^2.12.0",
     "path-browserify": "^1.0.1",
-    "postcss": "^8.4.47",
     "process": "^0.11.10",
-    "tailwindcss": "^3.4.13",
     "util": "^0.12.5"
   },
   "browserslist": [
@@ -17,6 +14,8 @@
   "name": "swiggyato",
   "description": "",
   "version": "1.0.0",
+
+  
   "dependencies": {
     "abortcontroller-polyfill": "^1.7.5",
     "ansi-styles": "^4.3.0",
@@ -56,7 +55,7 @@
     "get-port": "^4.2.0",
     "globals": "^13.24.0",
     "has-flag": "^4.0.0",
-    "htmlnano": "^2.1.1",
+    "htmlnano": "^0.1.0",
     "htmlparser2": "^7.2.0",
     "import-fresh": "^3.3.0",
     "is-arrayish": "^0.2.1",
@@ -82,10 +81,12 @@
     "nth-check": "^2.1.1",
     "nullthrows": "^1.1.1",
     "ordered-binary": "^1.5.1",
+    "parcel-bundler": "^1.12.5",
     "parent-module": "^1.0.1",
     "parse-json": "^5.2.0",
     "picocolors": "^1.0.1",
     "picomatch": "^2.3.1",
+    "postcss": "^8.4.47",
     "postcss-value-parser": "^4.2.0",
     "posthtml": "^0.16.6",
     "posthtml-parser": "^0.10.2",

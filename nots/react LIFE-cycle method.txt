@@ -13,8 +13,8 @@
 //WEBSITE FOR UNDERSTING OF REACT LIFE-CYCLE METHOD -> https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
 
 //ther is tow phases in react life-cycle metohd 
-//1]-RENDER PHASE
-//2]-COMMIT PHASE
+//1-RENDER PHASE
+//2-COMMIT PHASE
 
 //1- RENDER PHASE
 //constructor will calld

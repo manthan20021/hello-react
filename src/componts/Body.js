@@ -1,4 +1,4 @@
-import React, { useEffect,useState } from "react"
+import React, { startTransition, useEffect,useState } from "react"
 import Card from "./Card"
 import Shimar from "./Shimar"
 import { Link } from "react-router-dom"
@@ -12,14 +12,11 @@ const [copyOfResData, setCopyOfResData] = useState([])
 const [searchText, setSearchText] = useState("")
 const [page, setPage] = useState(1)   
 
-console.log(useState());
+
+
 useEffect(()=> {
   fetchMothed() 
 
-  function toClenup(){
-    console.log("to cleanup messs");
-    
-  }
 },[page])
 
 const fetchMothed = async () => {
@@ -28,7 +25,6 @@ const fetchMothed = async () => {
 
 
   let restaurantData = json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
-  console.log(restaurantData);
   
   setResData((prev) => [...prev, ...restaurantData])
 let copyOfRestaurantData = json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle.restaurants
@@ -60,6 +56,7 @@ const handelScroll = async () => {
 
 
 
+
 //Conditinal Rendering
  
 const onlineStatus = useOnlineStatus()
@@ -72,7 +69,7 @@ if(onlineStatus === false) return <h1>you are of line now pleses turn on you'r i
         <div className= " body  ">
           <div className="" >
              {/* search functionality */}
-          <div className="search&filterBox sm:w-full sm:h-14 sm:flex sm:justify-center sm:items-center hidden  ">
+          <div className="search&filterBox sm:w-full sm:h-14 sm:flex sm:justify-center sm:items-center sm:mb-7 hidden  ">
           <div className="search sm:h-8 sm:w-96 sm:flex sm:items-center sm:justify-between hidden "> 
             <input className="sm:h-full sm:w-3/4 sm:rounded-md sm:pl-2 border-2  " placeholder="search"
              value={searchText}
@@ -100,11 +97,14 @@ if(onlineStatus === false) return <h1>you are of line now pleses turn on you'r i
           </div>
 
      
-       <div className="w-full h-auto flex justify-center item">
-       <div className="cardContenar grid sm:grid-cols-4 grid-cols-2 sm:max-w-[1200px] sm:min-w-[1200px]"> 
+       <div className="w-full h-auto flex justify-center item ">
+       <div className="cardContenar grid sm:grid-cols-4 grid-cols-2 sm:max-w-[1200px] sm:min-w-[1200px] bg-[#FFFFFF]"> 
           {
             copyOfResData.map(restaurantElement => {
-                return <Link key={restaurantElement.info.id} to={"/manu/" + restaurantElement.info.id}> <Card  resData = {restaurantElement} /></Link>
+                return <Link key={restaurantElement.info.id} to={"/manu/" + restaurantElement.info.id}> 
+                <Card  resData = {restaurantElement} />
+                
+                </Link>
                 
             })}
 
